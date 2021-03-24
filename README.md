@@ -1,45 +1,45 @@
-# `nutils-js` 前端高效开发必备库
+# `js-nutils` 前端高效开发必备库
 
 项目的开发中数据操作`array`、`number`、`object`、`string`、`类型判断`、`节流函数`等常用函数，为避免重复的造轮子，提高开发效率，发布到npm上。如果你也有优质的代码或者好的主意，欢迎为本项目提交pr。
 
 ## 下载
 
-压缩版
-完整版
-CDN
+* 压缩版
+* 完整版
+* CDN
 
 ## :building_construction: 安装使用
 
 支持ESM模块规范
 
 ### 浏览器:
-``` html
-<script src="nutils-js.min.js"></script>
+```html
+<script src="js-nutils.js"></script>
 ```
 
 ### npm:
-``` bash
-$ npm i --save nutils-js
+```bash
+$ npm i --save js-nutils
 // or
-$ npm i --save nutils-js
+$ npm i --save js-nutils
 ```
 ### webpack:
 
 ```js
-import * as _n from 'nutils-js' 
+import * as _n from 'js-nutils' 
 // or 
-import _n from 'nutils-js' 
+import _n from 'js-nutils' 
 // or 
-import {x ,y , z } from 'nutils-js'
+import {x ,y , z } from 'js-nutils'
 ```
 
 ### Node.js:
 
 ```js
-var _n = require('nutils-js');
+var _n = require('js-nutils');
 ```
 
-## :package:  API文档
+## :package: API文档
 
 ### 1.数组
 
@@ -114,7 +114,7 @@ average(...[1, 2, 3]); // 2
 average(1, 2, 3); // 2
 ```
 
-1. `sum` 求数组之和
+1. `sum` 数组求和
 
 ```js
 const sum = (...arr) => [...arr].reduce((acc, val) => acc + val, 0);
