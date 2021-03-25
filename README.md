@@ -357,7 +357,7 @@ isFind([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n', 1)
 
 该函数传入一个数组，第二参数截取最后长度， 返回截取后数组所以元素。
 
-```
+```js
 const cutOutLastArray = (arr, n = 1) => arr.slice(0, -n);
 
 // cutOutLastArray([1, 2, 3], 2)
