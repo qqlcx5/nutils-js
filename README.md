@@ -1,21 +1,8 @@
 # `js-nutils` 前端高效开发必备库
 
-项目的开发中数据操作`array`、`number`、`object`、`string`、`类型判断`、`节流函数`等常用函数，为避免重复的造轮子，提高开发效率，发布到npm上。如果你也有优质的代码或者好的主意，欢迎为本项目提交pr。
-
-## 下载
-
-* 压缩版
-* 完整版
-* CDN
+项目的开发中数据操作`array`、`number`、`object`、`string`、`类型判断`、`节流函数`等常用函数，为避免重复的造轮子，提高开发效率，发布到npm上。如果你也有好的代码或者好的主意，欢迎为本项目提交pr。
 
 ## :building_construction: 安装使用
-
-支持ESM模块规范
-
-### 浏览器:
-```html
-<script src="js-nutils.js"></script>
-```
 
 ### npm:
 ```bash
@@ -23,20 +10,12 @@ $ npm i --save js-nutils
 // or
 $ npm i --save js-nutils
 ```
-### webpack:
+### 使用
 
 ```js
 import * as _n from 'js-nutils' 
 // or 
-import _n from 'js-nutils' 
-// or 
-import {x ,y , z } from 'js-nutils'
-```
-
-### Node.js:
-
-```js
-var _n = require('js-nutils');
+import _n from 'js-nutils'
 ```
 
 ## :package: API文档
