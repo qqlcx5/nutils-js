@@ -1,4 +1,4 @@
-# `js-nutils` 前端高效开发必备库
+# `nutils-js` 前端高效开发必备库
 
 项目的开发中数据操作`array`、`number`、`object`、`string`、`类型判断`、`节流函数`等常用函数，为避免重复的造轮子，提高开发效率，发布到npm上。如果你也有好的代码或者好的主意，欢迎为本项目提交pr。
 
@@ -6,16 +6,16 @@
 
 ### npm:
 ```bash
-$ npm i --save js-nutils
+$ npm i --save nutils-js
 // or
-$ npm i --save js-nutils
+$ npm i --save nutils-js
 ```
 ### 使用
 
 ```js
-import * as _n from 'js-nutils' 
+import * as _n from 'nutils-js' 
 // or 
-import _n from 'js-nutils'
+import _n from 'nutils-js'
 ```
 
 ## :package: API文档

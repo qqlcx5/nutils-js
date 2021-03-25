@@ -1,7 +1,7 @@
 {
-  "name": "js-nutils",
-  "version": "1.0.1",
-  "description": "js-nutils",
+  "name": "nutils-js",
+  "version": "1.0.6",
+  "description": "前端高效开发必备库",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/qqlcx5/nutils-js.git"
   },
   "keywords": [
-    "utils"
+    "utils",
+    "工具库",
+    "前端高效开发必备库"
   ],
   "author": "前端有道",
   "license": "MIT",
