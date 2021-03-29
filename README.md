@@ -21,8 +21,11 @@ nutils.multArray([1, 2, 3], 2)
 ```
 ## :package: API文档
 
-### Array  
-#### &emsp;&emsp;[multArray][multArray]&emsp;&emsp;二维数组转换 
+### 数组  
+#### &emsp;&emsp;[multArray][multArray]&emsp;&emsp;二维数组转换
+
+### 对象  
+#### &emsp;&emsp;[isObjectEqual][isObjectEqual]&emsp;&emsp;检查两个对象各项值相等 
 
 ## 1.数组
 
