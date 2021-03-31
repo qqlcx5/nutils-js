@@ -88,6 +88,10 @@ nutils.multArray([1, 2, 3], 2)
 
 > 如果对本文有啥疑问或建议，欢迎加我微信`qqlcx55`一起学习哈
 
+| 微信  | 微信公众号 |
+|:---:|:-----:|
+|  ![weChat](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/wechat.jpeg)   |  ![public](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/public.jpg) |
+
 ## 一、数组
 
 ### `multArray`二维数组转换
