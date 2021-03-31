@@ -1,11 +1,11 @@
-# Javascript 前端高效开发实用工具库
+# Javascript 高效开发工具库
 
 [![npm](https://img.shields.io/npm/v/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)
 [![LICENSE MIT](https://img.shields.io/npm/l/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)
 
-:rocket: `nutils-js` 是一个模块化、高性能的 JavaScript 实用工具库。
+:rocket: `nutils-js` 是我封装的一个模块化、高性能的 JavaScript 实用工具库。
 
-日常开发中难免遇到`Array` `Object` `String` `Number`等数据处理，或者是视图上`防抖节流函数`等性能优化亦或者` URL参数处理``类型判断 `等等为避免不同项目复制粘贴的麻烦，将方法进行封装，发布在 npm 上，如果后续有更优的写法也会做进一步的更新。还有就是你有好的建议或者想为本项目贡献一份力的话，欢迎为本项目提交 pr，一起探讨和交流。
+前端开发中经常会遇到`Array`、`Object`、`String`、`Number`等数据处理，或者是防抖节流函数等性能优化亦或是 URL 参数处理、类型判断等等操作，为了提高开发效率，我将这些常见公共方法进行抽离并封装好，发布在 npm 上，后续如有更优的写法也会做进一步的更新。另外读者朋友们如果有好的建议或者想为本项目贡献一份力的话，欢迎为本项目提交 pr，一起探讨和交流。
 
 ## :arrow_down: 安装
 
@@ -22,71 +22,75 @@ nutils.multArray([1, 2, 3], 2)
 
 ## :package: API 文档
 
-### [数组](##1.数组)
+### 数组
 
--   [1.`multArray`二维数组转换](###1.`multArray`二维数组转换)
--   [2.`flatten`扁平化数组](###2.`flatten`扁平化数组)
--   [3.`flattenDeep`指定层级扁平化数组](###3.`flattenDeep`指定层级扁平化数组)
--   [4.`isArrayEqual`检查两个数组各项相等](###4.`isArrayEqual`检查两个数组各项相等)
--   [5.`allEqual`检查数组各项相等](###5.`allEqual`检查数组各项相等)
--   [6.`diffArray`具有唯一`array`值的数组](###6.`diffArray`具有唯一`array`值的数组)
--   [7.`haveArr`具有共同`array`值的数组](###7.`haveArr`具有共同`array`值的数组)
--   [8.`uniqueArray`数组去重](###8.`uniqueArray`数组去重)
--   [9.`uniqueArrayObject`数组对象去重](###9.`uniqueArrayObject`数组对象去重)
--   [10.`treeData`生成树结构数据](###10.`treeData`生成树结构数据)
--   [11.`ascArr`数组升序](###11.`ascArr`数组升序)
--   [12.`descArr`数组降序](###12.`descArr`数组降序)
--   [13.`shuffle`随机排序](###13.`shuffle`随机排序)
--   [14.`takeArray`截取数组开始指定的元素](###14.`takeArray`截取数组开始指定的元素)
--   [15.`takeLastArray`截取数组最后指定的元素](###15.`takeLastArray`截取数组最后指定的元素)
--   [16.`cloneArray`克隆数组](###16.`cloneArray`克隆数组)
--   [17.`maxArray`数组中最大值](###17.`maxArray`数组中最大值)
--   [18.`validArray`去除数组中的无效值](###18.`validArray`去除数组中的无效值)
+-   [`multArray`二维数组转换](###`multArray`二维数组转换)
+-   [`flatten`扁平化数组](###`flatten`扁平化数组)
+-   [`flattenDeep`指定层级扁平化数组](###`flattenDeep`指定层级扁平化数组)
+-   [`isArrayEqual`检查两个数组各项相等](###`isArrayEqual`检查两个数组各项相等)
+-   [`allEqual`检查数组各项相等](###`allEqual`检查数组各项相等)
+-   [`diffArray`具有唯一`array`值的数组](###`diffArray`具有唯一`array`值的数组)
+-   [`haveArr`具有共同`array`值的数组](###`haveArr`具有共同`array`值的数组)
+-   [`uniqueArray`数组去重](###`uniqueArray`数组去重)
+-   [`uniqueArrayObject`数组对象去重](###`uniqueArrayObject`数组对象去重)
+-   [`treeData`生成树结构数据](###`treeData`生成树结构数据)
+-   [`ascArr`数组升序](###`ascArr`数组升序)
+-   [`descArr`数组降序](###`descArr`数组降序)
+-   [`shuffle`随机排序](###`shuffle`随机排序)
+-   [`takeArray`截取数组开始指定的元素](###`takeArray`截取数组开始指定的元素)
+-   [`takeLastArray`截取数组最后指定的元素](###`takeLastArray`截取数组最后指定的元素)
+-   [`cloneArray`克隆数组](###`cloneArray`克隆数组)
+-   [`maxArray`数组中最大值](###`maxArray`数组中最大值)
+-   [`validArray`去除数组中的无效值](###`validArray`去除数组中的无效值)
 
-### [2.对象](##2.对象)
+### 对象
 
--   [1.`isObjectEqual`检查两个对象各项值相等](###1.`isObjectEqual`检查两个对象各项值相等)
--   [2.`cloneObject`克隆对象](###2.`cloneObject`克隆对象)
+-   [`isObjectEqual`检查两个对象各项值相等](###`isObjectEqual`检查两个对象各项值相等)
+-   [`cloneObject`克隆对象](###`cloneObject`克隆对象)
 
-### [3.函数](##3.函数)
+### 函数
 
--   [1.`debounce`函数防抖](###1.`debounce`函数防抖)
--   [2.`throttle`函数节流](###2.`throttle`函数节流)
--   [3.`typeFn`类型判断](###3.`typeFn`类型判断)
--   [4.`calcFn` 加减乘除运算](###4.`calcFn`加减乘除运算)
+-   [`debounce`函数防抖](###`debounce`函数防抖)
+-   [`throttle`函数节流](###`throttle`函数节流)
+-   [`typeFn`类型判断](###`typeFn`类型判断)
+-   [`calcFn` 加减乘除运算](###`calcFn`加减乘除运算)
 
-### [4.字符串](##4.字符串)
+### 字符串
 
--   [1.`isNil`值是否是`null`或`undefined`](###1.`isNil`值是否是`null`或`undefined`)
--   [2.`padStart`遮住字符串](###2.`padStart`遮住字符串)
--   [3.`thousands`数字每隔三位数加分号](###3.`thousands`数字每隔三位数加分号)
+-   [`isNil`值是否是`null`或`undefined`](###`isNil`值是否是`null`或`undefined`)
+-   [`padStart`遮住字符串](###`padStart`遮住字符串)
+-   [`thousands`数字每隔三位数加分号](###`thousands`数字每隔三位数加分号)
 
-### [5.数字](##5.数字)
+### 数字
 
--   [1.`randomNumber`指定范围的随机整数](###1.`randomNumber`指定范围的随机整数)
--   [2.`average`求平均值](###2.`average`求平均值)
--   [3.`averageBy`检查数组对象各项相等](###3.`averageBy`检查数组对象各项相等)
--   [4.`aboutEqual`两个值是否约等于](###4.`aboutEqual`两个值是否约等于)
--   [5.`getLineSize`计算两点之间的距离](###5.`getLineSize`计算两点之间的距离)
--   [6.`sum`数组中值总和](###6.`sum`数组中值总和)
+-   [`randomNumber`指定范围的随机整数](###`randomNumber`指定范围的随机整数)
+-   [`average`求平均值](###`average`求平均值)
+-   [`averageBy`检查数组对象各项相等](###`averageBy`检查数组对象各项相等)
+-   [`aboutEqual`两个值是否约等于](###`aboutEqual`两个值是否约等于)
+-   [`getLineSize`计算两点之间的距离](###`getLineSize`计算两点之间的距离)
+-   [`sum`数组中值总和](###`sum`数组中值总和)
 
-### [6.浏览器](##6.浏览器)
+### 浏览器
 
--   [1.`copyText`H5复制文本](###1.`copyText`H5复制文本)
--   [2.`getCurrentURL`获取当前的URL地址](###2.`getCurrentURL`获取当前的URL地址)
--   [3.`scrollToTop`返回顶部](###3.`scrollToTop`返回顶部)
--   [4.`smoothScroll`平滑滚动页面](###4.`smoothScroll`平滑滚动页面)
--   [5.`isCurrentPage`是否是当前页面](###5.`isCurrentPage`是否是当前页面)
+-   [`copyText`H5 复制文本](###`copyText`H5复制文本)
+-   [`getCurrentURL`获取当前的 URL 地址](###`getCurrentURL`获取当前的URL地址)
+-   [`scrollToTop`返回顶部](###`scrollToTop`返回顶部)
+-   [`smoothScroll`平滑滚动页面](###`smoothScroll`平滑滚动页面)
+-   [`isCurrentPage`是否是当前页面](###`isCurrentPage`是否是当前页面)
 
-### [7.环境](##7.环境)
+### 环境
 
--   [1.`isBrowser`是否是浏览器](###1.`isBrowser`是否是浏览器)
--   [2.`isWechatBrowser`判断微信浏览器还是普通h5](###2.`isWechatBrowser`判断微信浏览器还是普通h5)
--   [3.`isMobile`判断是否是移动端](###3.`isMobile`判断是否是移动端)
+-   [`isBrowser`是否是浏览器](###`isBrowser`是否是浏览器)
+-   [`isWechatBrowser`判断微信浏览器还是普通 h5](###`isWechatBrowser`判断微信浏览器还是普通h5)
+-   [`isMobile`判断是否是移动端](###`isMobile`判断是否是移动端)
 
-## 1.数组
+> 由于文章篇幅过长，公众号上只截取重点部分，如果需要最新完整版，请点击`GitHub`仓库进行查看
 
-### 1.`multArray`二维数组转换
+> 如果对本文有啥疑问或建议，欢迎加我微信`qqlcx55`一起学习哈
+
+## 一、数组
+
+### `multArray`二维数组转换
 
 将数组（array）拆分成多个子数组，并将这些子数组组成一个新数组。
 
@@ -96,8 +100,8 @@ multArray(array, count)
 
 **参数**
 
-1. `array`需要处理的数组
-2. `count = 8`子数组需要的长度
+-   `array`需要处理的数组
+-   `count = 8`子数组需要的长度
 
 **示例**
 
@@ -123,7 +127,7 @@ function multArray(arr, count = 8) {
 }
 ```
 
-### 2.`flatten`扁平化数组
+### `flatten`扁平化数组
 
 将多层嵌套数组（array）拆分成一个数组
 
@@ -133,7 +137,7 @@ flatten(array)
 
 **参数**
 
-1.`array`多层嵌套数组
+-   `array`多层嵌套数组
 
 **示例**
 
@@ -153,7 +157,7 @@ const flatten = arr => [].concat(...arr.map(v => (Array.isArray(v) ? flatten(v) 
 const flatten = arr => arr.reduce((a, c) => a.concat(Array.isArray(c) ? flatten(c) : c), [])
 ```
 
-### 3.`flattenDeep`指定层级扁平化数组
+### `flattenDeep`指定层级扁平化数组
 
 将多层嵌套数组（array）拆分成指定层级数组
 
@@ -163,7 +167,7 @@ flattenDeep(array, depth)
 
 **参数**
 
-1.`array`多层嵌套数组 2.`depth = 1` 减少的嵌套层级数
+-   `array`多层嵌套数组 `depth = ` 减少的嵌套层级数
 
 **示例**
 
@@ -182,7 +186,7 @@ flattenDeep([1, [2, [3, [4]], 5]], 1)
 const flattenDeep = (arr, depth = 1) => arr.reduce((a, v) => a.concat(depth > 1 && Array.isArray(v) ? flatten(v, depth - 1) : v), [])
 ```
 
-### 4.`isArrayEqual`检查两个数组各项相等
+### `isArrayEqual`检查两个数组各项相等
 
 比较两个数组内的各项值是否相等，返回一个`Boolean`值
 
@@ -192,8 +196,8 @@ isArrayEqual(array, array)
 
 **参数**
 
-1. `array` 要检查的数组
-2. `array` 要检查的数组
+-   `array` 要检查的数组
+-   `array` 要检查的数组
 
 **示例**
 
@@ -216,7 +220,7 @@ const isArrayEqual = (a, b, has = true) => {
 }
 ```
 
-### 5.`allEqual`检查数组各项相等
+### `allEqual`检查数组各项相等
 
 ```js
 allEqual(array)
@@ -224,7 +228,7 @@ allEqual(array)
 
 **参数**
 
-1. `array` 要检查的数组
+-   `array` 要检查的数组
 
 **示例**
 
@@ -242,7 +246,7 @@ allEqual([1, 1, 1, 1])
 const allEqual = arr => arr.every(val => val === arr[0])
 ```
 
-### 6.`diffArray`具有唯一`array`值的数组
+### `diffArray`具有唯一`array`值的数组
 
 创建一个具有唯一 array 值的数组，每个值不包含在其他给定的数组中
 
@@ -252,8 +256,8 @@ diffArray(array, array2)
 
 **参数**
 
-1. `array` 要检查的数组
-2. `array2`要排除的数组
+-   `array` 要检查的数组
+-   `array2`要排除的数组
 
 **示例**
 
@@ -272,7 +276,7 @@ const diffArray = (a, b) => {
 }
 ```
 
-### 7.`haveArr`具有共同`array`值的数组
+### `haveArr`具有共同`array`值的数组
 
 创建一个具有共同 array 值的数组，每个值包含在其他给定的数组中
 
@@ -282,8 +286,8 @@ haveArr(array, array2)
 
 **参数**
 
-1. `array` 要检查的数组
-2. `array2`要包含的数组
+-   `array` 要检查的数组
+-   `array2`要包含的数组
 
 **示例**
 
@@ -303,7 +307,7 @@ const haveArr = (a, b) => {
 const haveArr = (arr, values) => arr.filter(v => values.includes(v))
 ```
 
-### 8.`uniqueArray`数组去重
+### `uniqueArray`数组去重
 
 创建一个去重后的 array 数组副本
 
@@ -313,7 +317,7 @@ uniqueArray(array)
 
 **参数**
 
-1. `array` 要去重的数组
+-   `array` 要去重的数组
 
 **示例**
 
@@ -330,7 +334,7 @@ const uniqueArray = (...arr) => [...new Set(arr)]
 const uniqueArray = (...arr) => Array.from(new Set(arr))
 ```
 
-### 9.`uniqueArrayObject`数组对象去重
+### `uniqueArrayObject`数组对象去重
 
 创建一个去重后的 array 数组对象副本
 
@@ -340,8 +344,8 @@ uniqueArrayObject(array)
 
 **参数**
 
-1. `array` 要去重的数组
-2. `key` 要去重的对象属性值
+-   `array` 要去重的数组
+-   `key` 要去重的对象属性值
 
 **示例**
 
@@ -378,7 +382,7 @@ const uniqueArrayObject = (arr, key) => {
 }
 ```
 
-### 10.`treeData`生成树结构数据
+### `treeData`生成树结构数据
 
 该函数传入一个数组， 每项`id`对应其父级数据`parent_id`，返回一个树结构数组
 
@@ -388,9 +392,9 @@ treeData(array, id, parent_id)
 
 **参数**
 
-1. `array` 要生成树结构的数组
-2. `id` 自定义属性名
-3. `parent_id` 父级自定义属性名
+-   `array` 要生成树结构的数组
+-   `id` 自定义属性名
+-   `parent_id` 父级自定义属性名
 
 **示例**
 
@@ -414,7 +418,7 @@ treeData(comments)
 const treeData = (arr, id = null, link = 'parent_id') => arr.filter(item => item[link] === id).map(item => ({ ...item, children: treeData(arr, item.id) }))
 ```
 
-### 11.`ascArr`数组升序
+### `ascArr`数组升序
 
 返回升序后的新数组
 
@@ -426,7 +430,7 @@ ascArr(array)
 
 **参数**
 
-1. `array` 要检查的排序数组
+-   `array` 要检查的排序数组
 
 **示例**
 
@@ -442,7 +446,7 @@ ascArr([3, 2, 3, 4, 1])
 const ascArr = arr => [...arr].sort((a, b) => a - b)
 ```
 
-### 12.`descArr`数组降序
+### `descArr`数组降序
 
 返回降序后的新数组
 
@@ -452,7 +456,7 @@ descArr(array)
 
 **参数**
 
-1. `array` 要检查的排序数组
+-   `array` 要检查的排序数组
 
 **示例**
 
@@ -467,7 +471,7 @@ descArr([3, 2, 3, 4, 1])
 const descArr = arr => [...arr].sort((a, b) => b - a)
 ```
 
-### 13.`shuffle`随机排序
+### `shuffle`随机排序
 
 创建一个随机的数组，使用`Fisher-Yates`算法随机排序数组的元素
 
@@ -477,7 +481,7 @@ shuffle(array)
 
 **参数**
 
-1. `array` 要随机的数组
+-   `array` 要随机的数组
 
 **示例**
 
@@ -499,7 +503,7 @@ const shuffle = ([...arr]) => {
 }
 ```
 
-### 14.`takeArray`截取数组开始指定的元素
+### `takeArray`截取数组开始指定的元素
 
 从 array 数组的最开始一个元素开始提取 n 个元素
 
@@ -509,8 +513,8 @@ takeArray(array, n)
 
 **参数**
 
-1. `array`要检索的数组。
-2. `n=1`要提取的元素`n`个数。
+-   `array`要检索的数组。
+-   `n=`要提取的元素`n`个数。
 
 **示例**
 
@@ -525,7 +529,7 @@ takeArray([2, 3, 1], 2)
 const takeArray = (arr, n = 1) => arr.slice(0, n)
 ```
 
-### 15.`takeLastArray`截取数组最后指定的元素
+### `takeLastArray`截取数组最后指定的元素
 
 从 array 数组的最后一个元素开始提取 n 个元素
 
@@ -535,8 +539,8 @@ takeLastArray(array, n)
 
 **参数**
 
-1. `array`要检索的数组。
-2. `n=1`要提取的元素`n`个数。
+-   `array`要检索的数组。
+-   `n=`要提取的元素`n`个数。
 
 **示例**
 
@@ -551,7 +555,7 @@ takeArray([2, 3, 1], 2)
 const takeLastArray = (arr, n = 1) => arr.slice(0, -n)
 ```
 
-### 16.`cloneArray`克隆数组
+### `cloneArray`克隆数组
 
 浅拷贝一份数组副本
 
@@ -561,7 +565,7 @@ cloneArray(array)
 
 **参数**
 
-1. `array`要复制的数组
+-   `array`要复制的数组
 
 **示例**
 
@@ -588,7 +592,7 @@ const cloneArray = arr => arr.map(x => x)
 cloneArray([1, 24]) // [1, 24]
 ```
 
-### 17.`maxArray`数组中最大值
+### `maxArray`数组中最大值
 
 过滤原数组中所有的非假值元素，返回数组中的最大值
 
@@ -598,7 +602,7 @@ maxArray(array)
 
 **参数**
 
-1. `array`待处理的数组
+-   `array`待处理的数组
 
 **示例**
 
@@ -613,7 +617,7 @@ maxArray([0, -1, -2, -3, false])
 const maxArray = arr => Math.max(...arr.filter(v => Boolean(v) || v === 0))
 ```
 
-### 18. `minArray`数组中最小值
+### `minArray`数组中最小值
 
 过滤原数组中所有的非假值元素，返回数组中的最小值
 
@@ -623,23 +627,22 @@ minArray(array)
 
 **参数**
 
-1. `array`待处理的数组
+-   `array`待处理的数组
 
 **示例**
-js
 
-```
+```js
 minArray([0, -1, -2, -3, false])
 // => -3
 ```
 
 **源码**
 
-```
-const minArray = (arr) => Math.min(...arr.filter((v) => Boolean(v) || v === 0));
+```js
+const minArray = arr => Math.min(...arr.filter(v => Boolean(v) || v === 0))
 ```
 
-### 18.`validArray`去除数组中的无效值
+### `validArray`去除数组中的无效值
 
 创建一个新数组，包含原数组中所有的非假值元素。例如`false`, `null`,`0`, `""`, `undefined`, 和 `NaN` 都是被认为是“假值”。
 
@@ -649,11 +652,11 @@ validArray(array)
 
 **参数**
 
-1. `array`待处理的数组
+-   `array`待处理的数组
 
 **示例**
 
-```
+```js
 minArray([0, 1, false, 2, '', 3])
 // => [1, 2, 3]
 ```
@@ -664,9 +667,9 @@ minArray([0, 1, false, 2, '', 3])
 const validArray = arr => arr.filter(Boolean)
 ```
 
-## 2.对象
+## 二、对象
 
-### 1.`isObjectEqual`检查两个对象各项值相等
+### `isObjectEqual`检查两个对象各项值相等
 
 ```js
 isObjectEqual(object, object2)
@@ -674,8 +677,8 @@ isObjectEqual(object, object2)
 
 **参数**
 
-1. `object`待检索的对象
-2. `object2`待检索的对象
+-   `object`待检索的对象
+-   `object2`待检索的对象
 
 **示例**
 
@@ -713,7 +716,7 @@ function isObjectEqual(obj1, obj2, has = true) {
 }
 ```
 
-### 2.`cloneObject`克隆对象
+### `cloneObject`克隆对象
 
 浅拷贝一份对象副本
 
@@ -723,7 +726,7 @@ cloneObject(object)
 
 **参数**
 
-1. `object`要复制的对象
+-   `object`要复制的对象
 
 **示例**
 
@@ -743,9 +746,9 @@ const cloneObject = (obj, temp = {}) => (temp = { ...obj })
 const cloneObject = obj => Object.assign({}, obj)
 ```
 
-## 3.函数
+## 三、函数
 
-### 1.`debounce`函数防抖
+### `debounce`函数防抖
 
 在事件被触发 n 秒后再执行回调，如果在这 n 秒内又被触发，则重新计时。
 
@@ -755,8 +758,8 @@ debounce(fn, wait)
 
 **参数**
 
-1. `fn` 要防抖动的函数
-2. `wait=500`需要延迟的毫秒数
+-   `fn` 要防抖动的函数
+-   `wait=500`需要延迟的毫秒数
 
 **示例**
 
@@ -787,7 +790,7 @@ const debounce = (function () {
 })()
 ```
 
-### 2.`throttle`函数节流
+### `throttle`函数节流
 
 规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。
 
@@ -797,8 +800,8 @@ throttle(fn, wait)
 
 **参数**
 
-1. `fn` 要节流的函数
-2. `wait=500`需要延迟的毫秒数
+-   `fn` 要节流的函数
+-   `wait=500`需要延迟的毫秒数
 
 **示例**
 
@@ -834,7 +837,7 @@ export const throttle = (function () {
 throttle(fn, 300)
 ```
 
-### 3.`typeFn`类型判断
+### `typeFn`类型判断
 
 判断是否是 `Array` `Object` `String` `Number`类型
 
@@ -844,8 +847,8 @@ typeFn.type(value)
 
 **参数**
 
-1. `type` 数据类型
-2. `value`要检验的值
+-   `type` 数据类型
+-   `value`要检验的值
 
 **示例**
 
@@ -884,7 +887,7 @@ function isType(type, content) {
 })
 ```
 
-### 4.`calcFn`加减乘除运算
+### `calcFn`加减乘除运算
 
 因为 JavaScript 遵循 IEEE 754 数学标准，使用 64 位浮点数进行运算。在进行十进制运算时会导致精度丢失。
 
@@ -894,8 +897,8 @@ calcFn.add(value1, value2, value3)
 
 **参数**
 
-1. ` add``sub``mul``div ` 运算符
-2. `value`要计算的值
+-   `add`、`sub`、`mul`、`div`运算符
+-   `value`要计算的值
 
 **示例**
 
@@ -989,9 +992,9 @@ function accDiv(arg1, arg2) {
 }
 ```
 
-## 4.字符串
+## 四、字符串
 
-### 1.`isNil`值是否是`null`或`undefined`
+### `isNil`值是否是`null`或`undefined`
 
 ```js
 isNil(value)
@@ -999,7 +1002,7 @@ isNil(value)
 
 **参数**
 
-1. `value` 要检验的值
+-   `value` 要检验的值
 
 **示例**
 
@@ -1015,7 +1018,7 @@ isNil(undefined)
 const isNil = val => val === undefined || val === null
 ```
 
-### 2.`padStart`遮住字符串
+### `padStart`遮住字符串
 
 ```js
 padStart(value, n, maskChar)
@@ -1023,9 +1026,9 @@ padStart(value, n, maskChar)
 
 **参数**
 
-1. `value` 要遮住字符串
-2. `n = 4` 填充的长度
-3. `maskChar` 填充字符
+-   `value` 要遮住字符串
+-   `n = 4` 填充的长度
+-   `maskChar` 填充字符
 
 **示例**
 
@@ -1040,7 +1043,7 @@ padStart('18659808664')
 const padStart = (str, n = 4, maskChar = '*') => str.slice(0, n).padStart(str.length, maskChar)
 ```
 
-### 3.`thousands`数字每隔三位数加分号
+### `thousands`数字每隔三位数加分号
 
 ```js
 thousands(number)
@@ -1048,13 +1051,13 @@ thousands(number)
 
 **参数**
 
-1. `number` 数字或者浮点数
+-   `number` 数字或者浮点数
 
 **示例**
 
 ```js
-thousands(12255555.2323)
-// => 12,255,555.2323
+thousands(12255552323)
+// => 12,255,552323
 ```
 
 **源码**
@@ -1063,9 +1066,9 @@ thousands(12255555.2323)
 const thousands = num => num.toString().replace(num.toString().indexOf('.') > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(\d{3})+$)/g, '$1,')
 ```
 
-## 5.数字
+## 五、数字
 
-### 1.`randomNumber`指定范围的随机整数
+### `randomNumber`指定范围的随机整数
 
 ```js
 randomNumber(min, max)
@@ -1073,8 +1076,8 @@ randomNumber(min, max)
 
 **参数**
 
-1. `min` 指定范围最小值
-2. `max` 指定范围最大值
+-   `min` 指定范围最小值
+-   `max` 指定范围最大值
 
 **示例**
 
@@ -1090,7 +1093,7 @@ randomNumber(0, 10)
 const randomNumber = (min = 0, max = 10) => Math.floor(Math.random() * (max - min + 1)) + min
 ```
 
-### 2.`average`求平均值
+### `average`求平均值
 
 ```js
 average(value1, value2, value3)
@@ -1098,7 +1101,7 @@ average(value1, value2, value3)
 
 **参数**
 
-1. `value` 数字
+-   `value` 数字
 
 **示例**
 
@@ -1114,7 +1117,7 @@ average(1, 2, 3)
 const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length
 ```
 
-### 3.`averageBy`检查数组对象各项相等
+### `averageBy`检查数组对象各项相等
 
 ```
 averageBy(array, fn)
@@ -1122,8 +1125,8 @@ averageBy(array, fn)
 
 **参数**
 
-1. `array` 要迭代的数组
-2. `fn` 迭代函数
+-   `array` 要迭代的数组
+-   `fn` 迭代函数
 
 **示例**
 
@@ -1139,7 +1142,7 @@ averageBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], 'n')
 const averageBy = (arr, fn) => arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => acc + val, 0) / arr.length
 ```
 
-### 4.`aboutEqual`两个值是否约等于
+### `aboutEqual`两个值是否约等于
 
 传入两个数字是否大致相等，误差在可接受范围内
 
@@ -1149,13 +1152,13 @@ aboutEqual(n1, n2, epsilon)
 
 **参数**
 
-1. `n1 n2` 要比较的数字
-2. `epsilon` 误差可接受范围内
+-   `n1 n2` 要比较的数字
+-   `epsilon` 误差可接受范围内
 
 **示例**
 
-```
-aboutEqual(1.25, 1.2, 0.06)
+```js
+aboutEqual(25, 2, 0.06)
 // => true
 ```
 
@@ -1165,7 +1168,7 @@ aboutEqual(1.25, 1.2, 0.06)
 const aboutEqual = (n1, n2, epsilon = 0.001) => Math.abs(n1 - n2) < epsilon
 ```
 
-### 5.`getLineSize`计算两点之间的距离
+### `getLineSize`计算两点之间的距离
 
 勾股定理计算两点之间的距离
 
@@ -1175,7 +1178,7 @@ getLineSize = (x1, y1, x2, y2)
 
 **参数**
 
-1.`x1 y1 x2 y2`坐标点
+-   `x1 y1 x2 y2`坐标点
 
 **示例**
 
@@ -1190,15 +1193,15 @@ getLineSize(0, 0, 3, 4)
 const getLineSize = (x1, y1, x2, y2) => Math.hypot(x2 - x1, y2 - y1)
 ```
 
-### 6.`sum`数组中值总和
+### `sum`数组中值总和
 
-```
+```js
 sum(value1, value2, value3)
 ```
 
 **参数**
 
-1.`value1 value2 value3`要迭代的数字
+-   `value1 value2 value3`要迭代的数字
 
 **示例**
 
@@ -1214,9 +1217,9 @@ sum(...[1, 2, 3, 4])
 const sum = (...arr) => [...arr].reduce((acc, val) => acc + val, 0)
 ```
 
-## 6.浏览器
+## 六、浏览器
 
-### 1.`copyText`H5复制文本
+### `copyText`H5复制文本
 
 ```
 copyText(content, callback)
@@ -1224,8 +1227,8 @@ copyText(content, callback)
 
 **参数**
 
-1. `content`要复制文字
-2. `callback` 回调用户提示
+-   `content`要复制文字
+-   `callback` 回调用户提示
 
 **示例**
 
@@ -1256,7 +1259,7 @@ function copyText(content, callback) {
 }
 ```
 
-### 2.`getCurrentURL`获取当前的URL地址
+### `getCurrentURL`获取当前的 URL 地址
 
 该函数返回当前页面的 URL 地址。
 
@@ -1264,7 +1267,7 @@ function copyText(content, callback) {
 
 ```js
 getCurrentURL()
-// => "https://qqlcx5.github.io/"
+// =>
 ```
 
 **源码**
@@ -1273,7 +1276,7 @@ getCurrentURL()
 const getCurrentURL = () => window.location.href
 ```
 
-### 3.`scrollToTop`返回顶部
+### `scrollToTop`返回顶部
 
 平滑地滚动到当前页面的顶部。
 
@@ -1296,7 +1299,7 @@ const scrollToTop = () => {
 }
 ```
 
-### 4.`smoothScroll`平滑滚动页面
+### `smoothScroll`平滑滚动页面
 
 平滑滚动到浏览器窗口的可见区域
 
@@ -1387,3 +1390,8 @@ isMobile()
 ```js
 const isMobile = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 ```
+
+## 参考资料
+
+-   [30 seconds of code](https://www.30secondsofcode.org/)
+-   [lodash](https://www.lodashjs.com/)
