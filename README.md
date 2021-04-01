@@ -90,8 +90,6 @@ nutils.multArray([1, 2, 3], 2)
 |:---:|:-----:|
 |  ![weChat](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/wechat.jpeg)   |  ![public](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/public.jpg) |
 
-[github地址](https://github.com/qqlcx5/nutils-js)
-
 ## 一、数组
 
 ### `multArray`二维数组转换
