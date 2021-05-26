@@ -17,31 +17,30 @@ $ npm i --save nutils-js
 
 ```js
 const nutils = require('nutils-js')
-nutils.multArray([1, 2, 3], 2)
+nutils.chunk([1, 2, 3], 2)
 ```
 
 ## :package: API 文档
 
 ### 数组
 
--   [`multArray`二维数组转换](###`multArray`二维数组转换)
+-   [`chunk`二维数组转换](###`chunk`二维数组转换)
 -   [`flatten`扁平化数组](###`flatten`扁平化数组)
 -   [`flattenDeep`指定层级扁平化数组](###`flattenDeep`指定层级扁平化数组)
--   [`isArrayEqual`检查两个数组各项相等](###`isArrayEqual`检查两个数组各项相等)
--   [`allEqual`检查数组各项相等](###`allEqual`检查数组各项相等)
--   [`diffArray`具有唯一`array`值的数组](###`diffArray`具有唯一`array`值的数组)
--   [`haveArr`具有共同`array`值的数组](###`haveArr`具有共同`array`值的数组)
--   [`uniqueArray`数组去重](###`uniqueArray`数组去重)
--   [`uniqueArrayObject`数组对象去重](###`uniqueArrayObject`数组对象去重)
+-   [`isEqual`检查两个数组各项相等](###`isEqual`检查两个数组各项相等)
+-   [`difference`具有唯一`array`值的数组](###`difference`具有唯一`array`值的数组)
+-   [`have`具有共同`array`值的数组](###`have`具有共同`array`值的数组)
+-   [`unique`数组去重](###`unique`数组去重)
+-   [`uniqueBy`数组对象去重](###`uniqueBy`数组对象去重)
 -   [`treeData`生成树结构数据](###`treeData`生成树结构数据)
--   [`ascArr`数组升序](###`ascArr`数组升序)
--   [`descArr`数组降序](###`descArr`数组降序)
--   [`shuffle`随机排序](###`shuffle`随机排序)
--   [`takeArray`截取数组开始指定的元素](###`takeArray`截取数组开始指定的元素)
--   [`takeLastArray`截取数组最后指定的元素](###`takeLastArray`截取数组最后指定的元素)
--   [`cloneArray`克隆数组](###`cloneArray`克隆数组)
--   [`maxArray`数组中最大值](###`maxArray`数组中最大值)
--   [`validArray`去除数组中的无效值](###`validArray`去除数组中的无效值)
+-   [`sortAsc`数组升序](###`sortAsc`数组升序)
+-   [`sortDesc`数组降序](###`sortDesc`数组降序)
+-   [`shuffle`打乱数组](###`shuffle`打乱数组)
+-   [`take`截取数组开始指定的元素](###`take`截取数组开始指定的元素)
+-   [`takeLast`截取数组最后指定的元素](###`takeLast`截取数组最后指定的元素)
+-   [`clone`克隆数组](###`clone`克隆数组)
+-   [`max`数组中最大值](###`max`数组中最大值)
+-   [`compact`去除数组中的无效值](###`compact`去除数组中的无效值)
 
 ### 对象
 
@@ -92,12 +91,12 @@ nutils.multArray([1, 2, 3], 2)
 
 ## 一、数组
 
-### `multArray`二维数组转换
+### `chunk`二维数组转换
 
 将数组（array）拆分成多个子数组，并将这些子数组组成一个新数组。
 
 ```js
-multArray(array, count)
+chunk(array, count)
 ```
 
 **参数**
@@ -108,17 +107,17 @@ multArray(array, count)
 **示例**
 
 ```js
-multArray([1, 2, 3, 4, 5, 6, 7], 2)
+chunk([1, 2, 3, 4, 5, 6, 7], 2)
 => [[1, 2], [3, 4], [5, 6], [7]]
 
-multArray(['a', 'b', 'c', 'd'], 3)
+chunk(['a', 'b', 'c', 'd'], 3)
 => [['a', 'b', 'c'], ['d']]
 ```
 
 **源码**
 
 ```js
-function multArray(arr, count = 8) {
+function chunk(arr, count = 1) {
     let pages = []
     arr.forEach((item, index) => {
         const page = Math.floor(index / count)
@@ -188,12 +187,12 @@ flattenDeep([1, [2, [3, [4]], 5]], 1)
 const flattenDeep = (arr, depth = 1) => arr.reduce((a, v) => a.concat(depth > 1 && Array.isArray(v) ? flatten(v, depth - 1) : v), [])
 ```
 
-### `isArrayEqual`检查两个数组各项相等
+### `isEqual`检查两个数组各项相等
 
 比较两个数组内的各项值是否相等，返回一个`Boolean`值
 
 ```js
-isArrayEqual(array, array)
+isEqual(array, array)
 ```
 
 **参数**
@@ -204,17 +203,17 @@ isArrayEqual(array, array)
 **示例**
 
 ```js
-isArrayEqual([6, 5, 2, 4, 1, 3], [1, 2, 3, 4, 5, 6])
+isEqual([6, 5, 2, 4, 1, 3], [1, 2, 3, 4, 5, 6])
 // => true
 
-isArrayEqual([6, 5, 2, 7, 1, 3], [1, 2, 3, 4, 5, 6])
+isEqual([6, 5, 2, 7, 1, 3], [1, 2, 3, 4, 5, 6])
 // => false
 ```
 
 **源码**
 
 ```js
-const isArrayEqual = (a, b, has = true) => {
+const isEqual = (a, b, has = true) => {
     if (a.length !== b.length) return (has = false)
     const s = new Set(b)
     if (a.find(x => !s.has(x))) return (has = false)
@@ -222,38 +221,12 @@ const isArrayEqual = (a, b, has = true) => {
 }
 ```
 
-### `allEqual`检查数组各项相等
-
-```js
-allEqual(array)
-```
-
-**参数**
-
--   `array` 要检查的数组
-
-**示例**
-
-```js
-allEqual([1, 2, 3, 4, 5, 6])
-// => false
-
-allEqual([1, 1, 1, 1])
-// => true
-```
-
-**源码**
-
-```js
-const allEqual = arr => arr.every(val => val === arr[0])
-```
-
-### `diffArray`具有唯一`array`值的数组
+### `difference`具有唯一`array`值的数组
 
 创建一个具有唯一 array 值的数组，每个值不包含在其他给定的数组中
 
 ```js
-diffArray(array, array2)
+difference(array, array2)
 ```
 
 **参数**
@@ -264,26 +237,26 @@ diffArray(array, array2)
 **示例**
 
 ```js
-diffArray([1, 2, 6, 7], [1, 2, 9, 5])
+difference([1, 2, 6, 7], [1, 2, 9, 5])
 // => [ 6, 7 ]
 ```
 
 **源码**
 
 ```js
-const diffArray = (a, b) => {
+const difference = (a, b) => {
     const s = new Set(b)
     let arr = a.filter(x => !s.has(x))
     return arr
 }
 ```
 
-### `haveArr`具有共同`array`值的数组
+### `have`具有共同`array`值的数组
 
 创建一个具有共同 array 值的数组，每个值包含在其他给定的数组中
 
 ```js
-haveArr(array, array2)
+have(array, array2)
 ```
 
 **参数**
@@ -294,27 +267,27 @@ haveArr(array, array2)
 **示例**
 
 ```js
-haveArr([1, 2, 6, 7], [1, 2, 9, 5])
+have([1, 2, 6, 7], [1, 2, 9, 5])
 // => [ 1, 2 ]
 ```
 
 **源码**
 
 ```js
-const haveArr = (a, b) => {
+const have = (a, b) => {
     const s = new Set(b)
     return a.filter(x => s.has(x))
 }
 // ES6 includes
-const haveArr = (arr, values) => arr.filter(v => values.includes(v))
+const have = (arr, values) => arr.filter(v => values.includes(v))
 ```
 
-### `uniqueArray`数组去重
+### `unique`数组去重
 
 创建一个去重后的 array 数组副本
 
 ```js
-uniqueArray(array)
+unique(array)
 ```
 
 **参数**
@@ -324,24 +297,24 @@ uniqueArray(array)
 **示例**
 
 ```js
-uniqueArray([1, 2, 2, 3, 4, 4, 5])
+unique([1, 2, 2, 3, 4, 4, 5])
 // => [ 1, 2, 3, 4, 5 ]
 ```
 
 **源码**
 
 ```js
-const uniqueArray = (...arr) => [...new Set(arr)]
+const unique = (...arr) => [...new Set(arr)]
 
-const uniqueArray = (...arr) => Array.from(new Set(arr))
+const unique = (...arr) => Array.from(new Set(arr))
 ```
 
-### `uniqueArrayObject`数组对象去重
+### `uniqueBy`数组对象去重
 
 创建一个去重后的 array 数组对象副本
 
 ```js
-uniqueArrayObject(array)
+uniqueBy(array)
 ```
 
 **参数**
@@ -368,7 +341,7 @@ const responseList = [
     { id: 1, a: 4 },
 ]
 
-uniqueArrayObject(responseList, 'id')
+uniqueBy(responseList, 'id')
 
 // => [ { id: 1, a: 1 }, { id: 2, a: 2 }, { id: 3, a: 3 } ]
 ```
@@ -376,7 +349,7 @@ uniqueArrayObject(responseList, 'id')
 **源码**
 
 ```js
-const uniqueArrayObject = (arr, key) => {
+const uniqueBy = (arr, key) => {
     return arr.reduce((acc, cur) => {
         const ids = acc.map(item => item[key])
         return ids.includes(cur[key]) ? acc : [...acc, cur]
@@ -420,14 +393,14 @@ treeData(comments)
 const treeData = (arr, id = null, link = 'parent_id') => arr.filter(item => item[link] === id).map(item => ({ ...item, children: treeData(arr, item.id) }))
 ```
 
-### `ascArr`数组升序
+### `sortAsc`数组升序
 
 返回升序后的新数组
 
 > sort()方法会改变原数组，默认按 unicode 码顺序排列
 
 ```js
-ascArr(array)
+sortAsc(array)
 ```
 
 **参数**
@@ -437,7 +410,7 @@ ascArr(array)
 **示例**
 
 ```js
-ascArr([3, 2, 3, 4, 1])
+sortAsc([3, 2, 3, 4, 1])
 // => [ 1, 2, 3, 3, 4 ]
 ```
 
@@ -445,15 +418,15 @@ ascArr([3, 2, 3, 4, 1])
 
 ```js
 // 通过ES6 ...展开运算符浅拷贝一份新数组
-const ascArr = arr => [...arr].sort((a, b) => a - b)
+const sortAsc = arr => [...arr].sort((a, b) => a - b)
 ```
 
-### `descArr`数组降序
+### `sortDesc`数组降序
 
 返回降序后的新数组
 
 ```js
-descArr(array)
+sortDesc(array)
 ```
 
 **参数**
@@ -463,19 +436,19 @@ descArr(array)
 **示例**
 
 ```js
-descArr([3, 2, 3, 4, 1])
+sortDesc([3, 2, 3, 4, 1])
 // => [ 1, 2, 3, 3, 4 ]
 ```
 
 **源码**
 
 ```js
-const descArr = arr => [...arr].sort((a, b) => b - a)
+const sortDesc = arr => [...arr].sort((a, b) => b - a)
 ```
 
-### `shuffle`随机排序
+### `shuffle`打乱数组
 
-创建一个随机的数组，使用`Fisher-Yates`算法随机排序数组的元素
+创建一个打乱的数组，使用`Fisher-Yates`算法打乱数组的元素
 
 ```js
 shuffle(array)
@@ -483,7 +456,7 @@ shuffle(array)
 
 **参数**
 
--   `array` 要随机的数组
+-   `array` 要打乱的数组
 
 **示例**
 
@@ -505,12 +478,12 @@ const shuffle = ([...arr]) => {
 }
 ```
 
-### `takeArray`截取数组开始指定的元素
+### `take`截取数组开始指定的元素
 
 从 array 数组的最开始一个元素开始提取 n 个元素
 
 ```js
-takeArray(array, n)
+take(array, n)
 ```
 
 **参数**
@@ -521,22 +494,22 @@ takeArray(array, n)
 **示例**
 
 ```js
-takeArray([2, 3, 1], 2)
+take([2, 3, 1], 2)
 // => [2, 3]
 ```
 
 **源码**
 
 ```js
-const takeArray = (arr, n = 1) => arr.slice(0, n)
+const take = (arr, n = 1) => arr.slice(0, n)
 ```
 
-### `takeLastArray`截取数组最后指定的元素
+### `takeLast`截取数组最后指定的元素
 
 从 array 数组的最后一个元素开始提取 n 个元素
 
 ```js
-takeLastArray(array, n)
+takeLast(array, n)
 ```
 
 **参数**
@@ -547,22 +520,22 @@ takeLastArray(array, n)
 **示例**
 
 ```js
-takeArray([2, 3, 1], 2)
+take([2, 3, 1], 2)
 // => [3, 1]
 ```
 
 **源码**
 
 ```js
-const takeLastArray = (arr, n = 1) => arr.slice(0, -n)
+const takeLast = (arr, n = 1) => arr.slice(0, -n)
 ```
 
-### `cloneArray`克隆数组
+### `clone`克隆数组
 
 浅拷贝一份数组副本
 
 ```js
-cloneArray(array)
+clone(array)
 ```
 
 **参数**
@@ -572,7 +545,7 @@ cloneArray(array)
 **示例**
 
 ```js
-cloneArray([1, 24])
+clone([1, 24])
 // => [1, 24]
 ```
 
@@ -580,26 +553,26 @@ cloneArray([1, 24])
 
 ```js
 // ES6 ...
-const cloneArray = arr => [...arr]
+const clone = arr => [...arr]
 
 // ES6 Array.from
-const cloneArray = arr => Array.from(arr)
+const clone = arr => Array.from(arr)
 
 // concat()
-const cloneArray = arr => [].concat(arr)
+const clone = arr => [].concat(arr)
 
 // map()
-const cloneArray = arr => arr.map(x => x)
+const clone = arr => arr.map(x => x)
 
-cloneArray([1, 24]) // [1, 24]
+clone([1, 24]) // [1, 24]
 ```
 
-### `maxArray`数组中最大值
+### `max`数组中最大值
 
 过滤原数组中所有的非假值元素，返回数组中的最大值
 
 ```js
-maxArray(array)
+max(array)
 ```
 
 **参数**
@@ -609,22 +582,22 @@ maxArray(array)
 **示例**
 
 ```js
-maxArray([0, -1, -2, -3, false])
+max([0, -1, -2, -3, false])
 // => 0
 ```
 
 **源码**
 
 ```js
-const maxArray = arr => Math.max(...arr.filter(v => Boolean(v) || v === 0))
+const max = arr => Math.max(...arr.filter(v => Boolean(v) || v === 0))
 ```
 
-### `minArray`数组中最小值
+### `min`数组中最小值
 
 过滤原数组中所有的非假值元素，返回数组中的最小值
 
 ```js
-minArray(array)
+min(array)
 ```
 
 **参数**
@@ -634,22 +607,22 @@ minArray(array)
 **示例**
 
 ```js
-minArray([0, -1, -2, -3, false])
+min([0, -1, -2, -3, false])
 // => -3
 ```
 
 **源码**
 
 ```js
-const minArray = arr => Math.min(...arr.filter(v => Boolean(v) || v === 0))
+const min = arr => Math.min(...arr.filter(v => Boolean(v) || v === 0))
 ```
 
-### `validArray`去除数组中的无效值
+### `compact`去除数组中的无效值
 
 创建一个新数组，包含原数组中所有的非假值元素。例如`false`, `null`,`0`, `""`, `undefined`, 和 `NaN` 都是被认为是“假值”。
 
 ```js
-validArray(array)
+compact(array)
 ```
 
 **参数**
@@ -659,14 +632,14 @@ validArray(array)
 **示例**
 
 ```js
-minArray([0, 1, false, 2, '', 3])
+min([0, 1, false, 2, '', 3])
 // => [1, 2, 3]
 ```
 
 **源码**
 
 ```js
-const validArray = arr => arr.filter(Boolean)
+const compact = arr => arr.filter(Boolean)
 ```
 
 ## 二、对象
