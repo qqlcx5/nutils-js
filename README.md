@@ -4,6 +4,8 @@
 
 ![wechat](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/wechat_m.png)
 
+## [nutils-js官网](https://qqlcx5.github.io/nutils-js-site/)
+
 [![npm](https://img.shields.io/npm/v/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)
 [![LICENSE MIT](https://img.shields.io/npm/l/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)
 
@@ -28,23 +30,24 @@ nutils.chunk([1, 2, 3], 2)
 
 ### 数组
 
-- [`chunk`二维数组转换](###`chunk`二维数组转换)
-- [`flatten`扁平化数组](###`flatten`扁平化数组)
-- [`flattenDeep`指定层级扁平化数组](###`flattenDeep`指定层级扁平化数组)
-- [`isEqual`检查两个数组各项相等](###`isEqual`检查两个数组各项相等)
-- [`difference`具有唯一`array`值的数组](###`difference`具有唯一`array`值的数组)
-- [`have`具有共同`array`值的数组](###`have`具有共同`array`值的数组)
-- [`unique`数组去重](###`unique`数组去重)
-- [`uniqueBy`数组对象去重](###`uniqueBy`数组对象去重)
-- [`treeData`生成树结构数据](###`treeData`生成树结构数据)
-- [`sortAsc`数组升序](###`sortAsc`数组升序)
-- [`sortDesc`数组降序](###`sortDesc`数组降序)
-- [`shuffle`打乱数组](###`shuffle`打乱数组)
-- [`take`截取数组开始指定的元素](###`take`截取数组开始指定的元素)
-- [`takeLast`截取数组最后指定的元素](###`takeLast`截取数组最后指定的元素)
-- [`clone`克隆数组](###`clone`克隆数组)
-- [`max`数组中最大值](###`max`数组中最大值)
-- [`compact`去除数组中的无效值](###`compact`去除数组中的无效值)
+- [`chunk`二维数组转换](https://qqlcx5.github.io/nutils-js-site/tools/数组/chunk转换二维数组)
+- [`flatten`扁平化数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/flatten扁平化数组)
+- [`flattenDeep`指定层级扁平化数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/flattenDeep指定层级扁平化数组)
+- [`isEqual`检查两个数组各项相等](https://qqlcx5.github.io/nutils-js-site/tools/数组/isEqual检查两个数组各项相等)
+- [`difference`具有唯一`array`值的数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/diffArray唯一值数组)
+- [`have`具有共同`array`值的数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/have共有值数组)
+- [`unique`数组去重](https://qqlcx5.github.io/nutils-js-site/tools/数组/unique数组去重)
+- [`uniqueBy`数组对象去重](https://qqlcx5.github.io/nutils-js-site/tools/数组/uniqueBy数组对象去重)
+- [`treeData`生成树结构数据](https://qqlcx5.github.io/nutils-js-site/tools/数组/treeData生成树结构数据)
+- [`sortAsc`数组升序](https://qqlcx5.github.io/nutils-js-site/tools/数组/sortAsc数组升序)
+- [`sortDesc`数组降序](https://qqlcx5.github.io/nutils-js-site/tools/数组/sortDesc数组降序)
+- [`shuffle`打乱数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/shuffle打乱数组)
+- [`take`截取数组开始指定的元素](https://qqlcx5.github.io/nutils-js-site/tools/数组/take截取数组开始指定的元素)
+- [`takeLast`截取数组最后指定的元素](https://qqlcx5.github.io/nutils-js-site/tools/数组/takeLast截取数组最后指定的元素)
+- [`clone`克隆数组](https://qqlcx5.github.io/nutils-js-site/tools/数组/clone克隆数组)
+- [`max`数组中最大值](https://qqlcx5.github.io/nutils-js-site/tools/数组/max数组中最大值)
+- [`min`数组中最大值](https://qqlcx5.github.io/nutils-js-site/tools/数组/min数组中最大值)
+- [`compact`去除数组中的无效值](https://qqlcx5.github.io/nutils-js-site/tools/数组/compact去除数组中的无效值)
 
 ### 对象
 
