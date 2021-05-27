@@ -5,7 +5,7 @@
 ![wechat](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@v1.0.0/image/wechat_m.png)
 
 
-:point_right: :point_right: [**nutils-js官网**](https://qqlcx5.github.io/nutils-js-site/)
+:point_right: [nutils-js官网](https://qqlcx5.gitee.io/nutils-js-site/)
 
 [![npm](https://img.shields.io/npm/v/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)
 [![LICENSE MIT](https://img.shields.io/npm/l/nutils-js.svg)](https://www.npmjs.com/package/nutils-js)

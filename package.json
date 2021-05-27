@@ -1,8 +1,15 @@
 {
   "name": "nutils-js",
-  "version": "1.6.2",
-  "description": "前端高效开发必备库",
   "main": "index.js",
+  "description": "前端、vue、nutils、工具",
+  "version": "1.6.3",
+  "author": "前端有道",
+  "license": "MIT",
+  "keywords": [
+    "utils",
+    "nutils",
+    "前端"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/qqlcx5/nutils-js.git"
   },
-  "keywords": [
-    "utils",
-    "工具库",
-    "前端高效开发工具库"
-  ],
-  "author": "前端有道",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/qqlcx5/nutils-js/issues"
   },
