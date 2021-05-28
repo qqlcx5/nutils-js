@@ -1,14 +1,22 @@
 {
   "name": "nutils-js",
   "main": "index.js",
-  "description": "前端,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown",
-  "version": "1.6.4",
+  "description": "前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown",
+  "version": "1.6.5",
   "author": "前端有道",
   "license": "MIT",
   "keywords": [
+    "前端",
+    "大前端",
+    "web前端",
+    "前端开发",
+    "前端工具",
+    "nutils-js",
     "utils",
-    "nutils",
-    "前端"
+    "工具库",
+    "微信",
+    "小程序",
+    "微信小程序"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
