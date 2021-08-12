@@ -18,10 +18,4 @@ const throttle = (function() {
   }
 })();
 
-for (let index = 0; index < 20; index++) {
-  setTimeout(()=>{
-    throttle(()=>{console.log('throttle'+ index),500})
-  }, 1000)
-}
-
 module.exports = throttle
