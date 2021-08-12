@@ -13,6 +13,7 @@ function isObjectEqual(obj1, obj2, has = true) {
     let t2 = obj2[o] instanceof Object;
     if (t1 && t2) {
       has = isObjectEqual(obj1[o], obj2[o]);
+      break;
     } else if (obj1[o] !== obj2[o]) {
       has = false;
       break;

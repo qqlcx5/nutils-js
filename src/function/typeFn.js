@@ -19,7 +19,7 @@ function isType(type, content) {
   return Object.prototype.toString.call(content) === `[object ${type}]`
 }
 ;['String', 'Number', 'Boolean', 'Null', 'Array', 'Object', 'Function'].forEach(type => {
-  typeFn[type] = curring(isType)(type)
+  typeFn['is' + type] = curring(isType)(type)
 })
 
 module.exports = typeFn

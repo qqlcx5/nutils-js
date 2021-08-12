@@ -6,20 +6,18 @@
   "author": "前端有道",
   "license": "MIT",
   "keywords": [
+    "工具库",
     "前端",
     "大前端",
     "web前端",
     "前端开发",
     "前端工具",
-    "nutils-js",
     "utils",
-    "工具库",
-    "微信",
-    "小程序",
-    "微信小程序"
+    "nutils-js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack "
   },
   "repository": {
     "type": "git",
@@ -28,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/qqlcx5/nutils-js/issues"
   },
-  "homepage": "https://github.com/qqlcx5/nutils-js#readme"
+  "homepage": "https://github.com/qqlcx5/nutils-js#readme",
+  "devDependencies": {
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
+  }
 }
