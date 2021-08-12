@@ -1,5 +1,5 @@
 let modules = {};
-let files = require.context('./', true, /\.js$/);
+let files = require.context('./', true, /^\.\/.+\/.+\.js$/);
 files.keys().forEach((key) => {
   let name = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
   modules[name] = files(key);
