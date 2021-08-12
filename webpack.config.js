@@ -1,14 +1,13 @@
-const webpack = require('webpack')
+// const webpack = require('webpack')
+// const rootPath = path.resolve(__dirname)
 const path = require('path')
-
-const rootPath = path.resolve(__dirname, 'src')
 
 const config = {
     mode: 'production',
-    entry: path.resolve(rootPath, '../', 'index.js'),
+    entry: path.resolve(__dirname,'src', 'index.js'),
     output: {
         filename: 'nutils.min.js',
-        path: path.resolve(rootPath, 'min'),
+        path: path.resolve(__dirname, "libs"),
         library: 'nutils',
         libraryTarget: "umd"
     },
