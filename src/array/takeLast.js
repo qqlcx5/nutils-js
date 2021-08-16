@@ -5,6 +5,18 @@
  * @return {*} array
  */
 
-const takeLast = (arr, n = 1) => arr.slice(0, -n);
+const takeLast = (arr, n = 1) => Array.isArray(arr) ? arr.slice(-n, arr.length) : arr;
 
 module.exports = takeLast
+
+// console.log(takeLast([1, 2, 3]))
+// // => [1]
+ 
+// console.log(takeLast([1, 2, 3], 2))
+// // => [1, 2]
+ 
+// console.log(takeLast([1, 2, 3], 5))
+// // => [1, 2, 3]
+ 
+// console.log(takeLast([1, 2, 3], 0))
+// // => []
