@@ -1,6 +1,6 @@
 
 /**
- * @description: 扁平化
+ * @description: 扁平化数组
  * @param {*} arr The array
  * @return {*} array
  */
