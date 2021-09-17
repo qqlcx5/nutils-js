@@ -5,7 +5,8 @@
  * @return {*} boolean
  */
 
- const isArrayEqual = (a, b, has = true) => {
+ const isArrayEqual = (a, b) => {
+  let has = true
   if (a.length !== b.length) return has = false
   const s = new Set(b);
   if(a.find(x => !s.has(x))) return has = false

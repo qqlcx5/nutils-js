@@ -52,7 +52,7 @@ nutils.chunk([1, 2, 3], 2)
 
 ### 对象
 
-- [`isObjectEqual`检查两个对象各项值相等](###`isObjectEqual`检查两个对象各项值相等)
+- [`isEqual`检查两个对象各项值相等](###`isEqual`检查两个对象各项值相等)
 - [`cloneObject`克隆对象](###`cloneObject`克隆对象)
 
 ### 函数
